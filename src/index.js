@@ -39,7 +39,62 @@ const MORSE_TABLE = {
 
 function decode(expr) {
     // write your solution here
+    let arr = [];
+    
+    for(let i = 0; i<expr.length; i+=10) {
+        arr.push(expr.substr(i, 10))
+    }
+    
+    for(let i=0; i<arr.length; i++) {
+        Number(arr[i]);
+        if (arr[i] === "**********") {arr[i]=" "}
+        if (arr[i] === "0000001011") {arr[i]="a"}
+        if (arr[i] === "0000001110") {arr[i]="b"}
+        if (arr[i] === "0000001111") {arr[i]="c"}
+        if (arr[i] === "0000111010") {arr[i]="d"}
+        if (arr[i] === "0000000010") {arr[i]="e"}
+        if (arr[i] === "0000001111") {arr[i]="f"}
+        if (arr[i] === "0000001111") {arr[i]="g"}
+        if (arr[i] === "0010101010") {arr[i]="h"}
+        if (arr[i] === "0000001111") {arr[i]="i"}
+        if (arr[i] === "0000001111") {arr[i]="j"}
+        if (arr[i] === "0000001111") {arr[i]="k"}
+        if (arr[i] === "0010111010") {arr[i]="l"}
+        if (arr[i] === "0000001111") {arr[i]="m"}
+        if (arr[i] === "0000001111") {arr[i]="n"}
+        if (arr[i] === "0000111111") {arr[i]="o"}
+        if (arr[i] === "0000000010") {arr[i]="p"}
+        if (arr[i] === "0000000010") {arr[i]="q"}
+        if (arr[i] === "0000101110") {arr[i]="r"}
+        if (arr[i] === "0000000010") {arr[i]="s"}
+        if (arr[i] === "0000000010") {arr[i]="t"}
+        if (arr[i] === "0000000010") {arr[i]="u"}
+        if (arr[i] === "0000000010") {arr[i]="v"}
+        if (arr[i] === "0000101111") {arr[i]="w"}
+        if (arr[i] === "0000000010") {arr[i]="x"}
+        if (arr[i] === "0000000010") {arr[i]="y"}
+        if (arr[i] === "0000000010") {arr[i]="z"}
+        if (arr[i] === "1011111111") {arr[i]="1"}
+        if (arr[i] === "1010111111") {arr[i]="2"}
+        if (arr[i] === "1010101111") {arr[i]="3"}
+        if (arr[i] === "1010101011") {arr[i]="4"}
+        if (arr[i] === "1010101010") {arr[i]="5"}
+        if (arr[i] === "1110101010") {arr[i]="6"}
+        if (arr[i] === "1111101010") {arr[i]="7"}
+        if (arr[i] === "1111111010") {arr[i]="8"}
+        if (arr[i] === "1111111110") {arr[i]="9"}
+        if (arr[i] === "1111111111") {arr[i]="0"}
+    }
+    
+    return arr.join('');
 }
+
+
+
+
+
+
+
 
 module.exports = {
     decode
